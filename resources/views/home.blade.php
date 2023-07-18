@@ -7,17 +7,19 @@
     <title>Document</title>
 </head>
 <body>
+    @dump($listItems);
     <header>
+
         <nav>
-            @dump($listItems);
-            @foreach ($listItems as $item)
+        @foreach ($listItems as $item)
             <ul>
                 <li>
                     {{$item['element']}}
                 </li>
             </ul>
-        </nav>
         @endforeach
+        </nav>
+
     </header>
 </body>
 </html>
