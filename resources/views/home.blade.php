@@ -7,15 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    @dump($listItems);
+    @dump($listItems)
     <header>
 
         <nav>
         @foreach ($listItems as $item)
             <ul>
-                <li>
-                    {{$item['element']}}
-                </li>
+                <a href="{{$item['ref']}}">
+                    <li>
+                        {{$item['element']}}
+                    </li>
+                </a>
             </ul>
         @endforeach
         </nav>
