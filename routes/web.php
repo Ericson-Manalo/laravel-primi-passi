@@ -17,35 +17,67 @@ Route::get('/', function () {
     $data = [
         'listItems' => [
             [
-                'ref' => 'route("home")',
+                'ref' => route('home'),
                 'element' => 'Home',
             ],
             [   
-                'ref' => 'route("download")',
+                'ref' => route('download'),
                 'element' => 'Scarica',
             ],
             [
-                'ref' => 'route("why")',
+                'ref' => route('why'),
                 'element' => 'Perché Discord',
             ],
             [
-                'ref' => 'route("nitro")',
+                'ref' => route('nitro'),
                 'element' => 'Nitro',
             ],
             [
-                'ref' => 'route("security")',
+                'ref' => route('security'),
                 'element' => 'Sicurezza',
             ],
             [   
-                'ref' => 'route("assistance")',
+                'ref' => route('assistance'),
                 'element' => 'Assistenza',
             ]
         ]
     ];
     return view('home', $data);
-});
+})->name('home');
 
 Route::get('/download', function () {
 
-    return view('download', $data);
+    return view('download');
 })->name('download');
+
+
+
+
+Route::get('/why', function () {
+
+    return view('why');
+})->name('why');
+
+
+
+
+Route::get('/nitro', function () {
+
+    return view('nitro');
+})->name('nitro');
+
+
+
+
+Route::get('/security', function () {
+
+    return view('security');
+})->name('security');
+
+
+
+
+Route::get('/assistance', function () {
+
+    return view('assistance');
+})->name('assistance');
