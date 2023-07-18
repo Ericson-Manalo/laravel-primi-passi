@@ -14,5 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $data = [
+        'listItems' => [
+            [
+                'element' => 'Home',
+            ],
+            [
+                'element' => 'Scarica',
+            ],
+            [
+                'element' => 'Perché Discord',
+            ],
+            [
+                'element' => 'Nitro',
+            ],
+            [
+                'element' => 'Sicurezza',
+            ],
+            [
+                'element' => 'Assistenza',
+            ]
+        ]
+    ];
+    return view('home', $data);
 });
